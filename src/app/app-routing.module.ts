@@ -10,7 +10,7 @@ import { AddRestaurantComponent } from './component/add-restaurant/add-restauran
 
 const routes: Routes = [
 
-  
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   {path: 'header', component: HeaderComponent},
   {path: 'footer', component: FooterComponent},
   {path: 'admin', component: AdminComponent},
