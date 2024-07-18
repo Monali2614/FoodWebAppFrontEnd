@@ -16,10 +16,11 @@ export class LoginComponent {
   constructor(private userService: UserService , private router: Router) { }
 
   onLogin() {
+    
     this.userService.login(this.username, this.password).subscribe(response => {
       console.log('User data saved:@@@@@@@@@@@@@@@@@@@@', response);
       console.log(response.email);
-      this.router.navigate(['/home']);
+      this.router.navigate(['/header']);
     }, error => {
       console.error('Error saving user data:', error);
       this.errorMessage = 'Invalid username or password';
